@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historias de Oratoria</title>
+  <style>
+    /* ===== Paleta neutra y elegante ===== */
+    :root {
+      --bg-body: #faf9f6;
+      --text-main: #333333;
+      --text-light: #666666;
+      --accent: #8b7e6d; /* beige cálido suave */
+      --link-color: #5a5045;
+      --link-hover: #3a3228;
+      --header-bg: #ffffff;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding-top: 80px;
+    }
+
+    /* ===== Barra superior fija ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--header-bg);
+      box-shadow: 0 2px 10px var(--shadow);
+      z-index: 1000;
+      padding: 12px 20px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 0 8px;
+      text-decoration: none;
+      color: var(--link-color);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      color: var(--link-hover);
+      background-color: rgba(139, 126, 109, 0.08);
+    }
+
+    /* ===== Contenido principal ===== */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+    }
+
+    .story {
+      margin-bottom: 60px;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: transform 0.2s ease;
+    }
+
+    .story:hover {
+      transform: translateY(-2px);
+    }
+
+    .story h2 {
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      color: var(--accent);
+      border-bottom: 2px solid rgba(139, 126, 109, 0.2);
+      padding-bottom: 8px;
+    }
+
+    .story p {
+      margin-bottom: 16px;
+      color: var(--text-main);
+    }
+
+    .story strong {
+      color: var(--link-hover);
+      font-weight: 700;
+    }
+
+    .top-link {
+      display: inline-block;
+      margin: 12px 0;
+      color: var(--link-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .top-link:hover {
+      color: var(--link-hover);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 70px;
+      }
+      nav {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+      main {
+        padding: 0 16px 30px;
+      }
+      .story {
+        padding: 22px;
+      }
+      .story h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra superior con enlaces -->
+  <nav id="top">
+    <a href="#historia-1">1 - El gol que resonó en las nubes</a>
+    <a href="#historia-2">2 - Redes sobre las líneas invisibles</a>
+    <a href="#historia-3">3 - La ola del cóndor</a>
+    <a href="#historia-4">4 - Corriendo sobre el lago más alto</a>
+    <a href="#historia-5">5 - La pelota que despertó a los chimú</a>
+    <a href="#historia-6">6 - El grito del águila andina</a>
+    <a href="#historia-7">7 - La canasta de las nubes verdes</a>
+    <a href="#historia-8">8 - Once corazones sobre el desierto sagrado</a>
+    <a href="#historia-9">9 - El saque que subió a la ciudadela</a>
+    <a href="#historia-10">10 - La tabla que flotó en el lago sagrado</a>
+    <a href="#historia-11">11 - La carrera de la fortaleza olvidada</a>
+    <a href="#historia-12">12 - El rebote que desafió la nieve</a>
+    <a href="#historia-13">13 - El grito que despertó al adobe</a>
+    <a href="#historia-14">14 - El triple que cruzó el cañón</a>
+    <a href="#historia-15">15 - El penal en el ombligo del mundo</a>
+    <a href="#historia-16">16 - La red que unió selva y piedra</a>
+    <a href="#historia-17">17 - La ola que subió a la montaña</a>
+    <a href="#historia-18">18 - El sprint entre cóndores</a>
+    <a href="#historia-19">19 - La pelota que dibujó su propio geoglifo</a>
+    <a href="#historia-20">20 - El grito que flotó sobre el lago</a>
+    <a href="#historia-21">21 - El mate que subió al nevado</a>
+    <a href="#historia-22">22 - El gol que despertó al rey chimú</a>
+    <a href="#historia-23">23 - La red que atrapó el viento andino</a>
+    <a href="#historia-24">24 - La tabla que surcó el desierto</a>
+    <a href="#historia-25">25 - La última vuelta al corazón del mundo</a>
+  </nav>
+
+  <main>
+
+    <!-- Historia 1 -->
+    <section class="story" id="historia-1">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>1. El gol que resonó en las nubes</h2>
+      <p>En Cusco, donde el aire huele a eucalipto y la historia camina entre piedras milenarias, nació Renata. Su abuelo fue guía en Machu Picchu, y su madre, dueña de un <strong>food truck</strong> que servía quinoa frita y caldo de gallina a turistas cansados. Pero el verdadero amor de Renata era el fútbol: jugaba descalza en los andenes cercanos, usando una pelota hecha de trapos y sueños. Cada tarde, mientras los visitantes admiraban el amanecer sobre la ciudadela, ella practicaba tiros libres contra una pared de adobe.</p>
+      <p>Pero todo cambió cuando el torneo interdistrital fue cancelado por falta de apoyo. ¡No podían rendirse! Renata reunió a su equipo, alquiló un <strong>food truck</strong> abandonado, lo pintó con colores del arcoíris andino y lo convirtió en su “bus del orgullo cusqueño”. Viajaron hasta Aguas Calientes, cantando huaynos compuestos por ellos mismos, con letras que hablaban de raíces, resistencia y goles imposibles. La gente los siguió, grabó videos, y hasta el alcalde se emocionó.</p>
+      <p>Hoy, ese <strong>food truck</strong> sigue funcionando, pero ahora sirve “menús del campeón” y financia ligas infantiles en comunidades altiplánicas. Y cada vez que alguien pisa Machu Picchu, hay un eco que no es solo del viento: <strong>¡es el grito de once chicas que probaron que el fútbol también puede nacer entre las nubes sagradas!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 2 -->
+    <section class="story" id="historia-2">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>2. Redes sobre las líneas invisibles</h2>
+      <p>En Nasca, donde el desierto dibuja misterios en la tierra y el sol quema hasta los recuerdos, creció Diego. Su familia cultivaba café en pequeñas parcelas de Ica —sí, ¡en el <strong>desierto!</strong>— usando técnicas ancestrales y riego inteligente. Su hermana abrió una cafetería llamada “Geoglifo”, donde cada taza venía con una historia de las líneas. Pero Diego soñaba con otra cosa: con saltar, bloquear, y hacer que la pelota volara como los colibríes del sur. Jugaba vóley en la plaza, con redes hechas de redes de pesca viejas.</p>
+      <p>Cuando el colegio cerró su gimnasio por falta de fondos, Diego no se rindió. Organizó “Noches de Geoglifo”: después del cierre de la cafetería, movían las mesas, ponían parlantes y sonaba la cumbia amazónica de Los Mirlos mezclada con tambores <strong>nasquinos</strong>. La gente venía por el café… y se quedaba por el vóley. Las entradas eran un sol o un grano de café, y con eso compraron una red nueva.</p>
+      <p>Ahora, cada diciembre, se celebra el “Torneo de las Líneas”, donde equipos de toda la región juegan bajo las estrellas. Y si escuchas bien, entre el silencio del desierto, <strong>¡escucharás el sonido de una pelota que cruza la red como si trazara su propia línea sagrada!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 3 -->
+    <section class="story" id="historia-3">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>3. La ola del cóndor</h2>
+      <p>Aunque el Colca está lejos del mar, en Chivay vivía Lucía, una chica que descubrió el surf en un viaje escolar a Mollendo. Quedó hechizada: el balanceo, la libertad, el rugido del océano. De vuelta en el cañón, donde el cóndor ronda los cielos y el río Colca serpentea como un hilo de plata, construyó una tabla de madera con ayuda de su tío. Practicaba en el río cuando subía, imaginando que cada remada la acercaba al horizonte. Su familia tenía una bodega tradicional que ahora aceptaba pagos con Yape y vendía snacks saludables.</p>
+      <p>Pero cuando quisieron prohibir el acceso al río por “seguridad”, Lucía supo que debía actuar. Reunió a jóvenes, músicos afroperuanos de Arequipa y hasta a los artesanos de Yanque. Hicieron una feria cultural junto a la bodega: venta de productos locales, talleres de ritmos con cajón y danza, y una exhibición de “surf fluvial simbólico”. La prensa llegó, y el alcalde cedió.</p>
+      <p>Hoy, la bodega de Lucía tiene un mural del cóndor surfeando una ola de nubes. Y cada vez que suena el cajón en la plaza, <strong>¡el cañón entero vibra con el ritmo de quienes no necesitan mar para soñar con volar!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 4 -->
+    <section class="story" id="historia-4">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>4. Corriendo sobre el lago más alto</h2>
+      <p>En Puno, donde el lago Titicaca refleja el cielo como un espejo divino, Mateo corría. No por competir, sino por sentirse libre. Corría desde Juliaca hasta los Uros, con zapatillas rotas y una mochila llena de tejidos que su abuela vendía en una tienda digital. Ella tejía chullos con diseños de islas flotantes, y él los fotografiaba con su celular para subirlos a Instagram. El atletismo era su escape; el rock nacional, su banda sonora: <strong>Soda Stereo</strong>, Libido, y ahora bandas puneñas que cantan en aimara y guitarra eléctrica.</p>
+      <p>Pero cuando una empresa extranjera quiso patentar los diseños tradicionales como “moda étnica global”, Mateo corrió más fuerte que nunca. Organizó una maratón virtual: “Corre por tu identidad”. Cada kilómetro donado financiaba cursos de propiedad intelectual para artesanas. Y en la meta, un concierto de rock en la Isla Taquile, con amplificadores solares y tambores de cuero de alpaca. La campaña se volvió viral.</p>
+      <p>Ahora, la tienda digital de su abuela lleva el nombre “<strong>Runa Threads</strong>”, y cada compra incluye un código QR que reproduce una canción de rock puneño. Y si alguna vez corres por las orillas del Titicaca, <strong>¡recuerda que cada paso defiende una historia que nadie debe borrar!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 5 -->
+    <section class="story" id="historia-5">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>5. La pelota que despertó a los chimú</h2>
+      <p>En Trujillo, donde el sol dora las ruinas de Chan <strong>Chan</strong> y el mar susurra leyendas, Diego —sí, otro Diego, pero este con sangre chimú— jugaba frontón en la cancha del barrio El Porvenir. Su padre tenía un <strong>food truck</strong> llamado “Chimú <strong>Power</strong>”, famoso por sus brochetas de chancho y su salsa de ají rocoto. Pero lo que realmente unía al barrio era el frontón: allí se resolvían disputas, se sellaban amistades y se celebraban fiestas con huaynos cantados por la abuela de Diego, quien aún bailaba con trenzas y pollera.</p>
+      <p>Cuando quisieron demoler la cancha para construir un estacionamiento, Diego no se quedó callado. Convocó a todos: artesanos, estudiantes, chefs del <strong>food truck</strong> y hasta el grupo de danza folclórica. Hicieron una “Noche Chimú”: frontón iluminado con luces LED, comida típica, y un huayno nuevo que decía: “Mi pared no es concreto, es memoria”. La gente llenó las calles, y hasta el Ministerio de Cultura intervino.</p>
+      <p>Hoy, la cancha es un espacio cultural protegido. Y cada vez que la pelota golpea la pared, <strong>¡suena como el eco de un imperio que nunca dejó de jugar!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 6 -->
+    <section class="story" id="historia-6">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>6. El grito del águila andina</h2>
+      <p>En Caraz, al pie del imponente Huascarán, entrenaba Valeria. Desde los cinco años practicaba taekwondo en un dojo improvisado dentro de un galpón familiar. Su madre, caficultora de Áncash, abrió “Café Nevado”, una cafetería donde cada taza venía con una vista al nevado y una historia sobre cómo el grano crece entre heladas y esperanza. Valeria no solo pateaba el aire: lo hacía al ritmo de la cumbia amazónica que su hermano ponía en el altavoz —una mezcla extraña, pero que le daba fuerza.</p>
+      <p>Cuando un terremoto dañó el dojo y muchos pensaron en rendirse, Valeria propuso algo audaz: “Entrenemos en la plaza, frente al Huascarán, y que cada patada sea una oración por nuestra tierra”. Convirtió la cafetería en centro de acopio y sede de clases gratuitas. Los sábados, después del entrenamiento, sonaba “Sonido Selva” y todos bailaban, sudorosos y felices, como si el monte los bendijera. La comunidad entera se unió.</p>
+      <p>Hoy, “Café Nevado” financia becas de artes marciales para niñas de zonas rurales. Y cada vez que Valeria rompe una tabla con un grito, <strong>¡el eco sube hasta la cima del Huascarán y vuelve como un mensaje: “Aquí, la fuerza nace del corazón y del suelo que nos vio nacer!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 7 -->
+    <section class="story" id="historia-7">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>7. La canasta de las nubes verdes</h2>
+      <p>En Chachapoyas, donde la selva se enrosca alrededor de fortalezas milenarias, jugaba Samuel. Su cancha de básquet estaba hecha de tierra roja y aros de fierro oxidado, justo al pie de <strong>Kuelap</strong>. Su familia tenía una bodega tradicional que ahora ofrecía <strong>delivery</strong> con mototaxis eléctricas y pagos con billetera móvil. Pero lo que realmente movía a Samuel era el ritmo: los domingos, su abuelo tocaba el cajón en la plaza, y él practicaba dribles al compás de la música afroperuana, como si cada paso fuera un verso.</p>
+      <p>Cuando la lluvia se llevó parte de la cancha y nadie quiso reconstruirla, Samuel no se rindió. Usó redes sociales para lanzar “Canasta por Cultura”: por cada donación, la bodega regalaba un jugo de aguaymanto, y los músicos afroperuanos de Amazonas daban conciertos al atardecer. La gente llegó desde Moyobamba, desde Bagua, incluso desde Lima. Grabaron un video que mostraba cómo el básquet y la percusión podían hablar el mismo idioma.</p>
+      <p>Ahora, la cancha tiene piso de caucho reciclado y un mural de un guerrero chachapoya lanzando un triple. Y cuando el balón entra al aro, <strong>¡suena como el golpe del cajón en el alma de la selva!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 8 -->
+    <section class="story" id="historia-8">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>8. Once corazones sobre el desierto sagrado</h2>
+      <p>En Nasca, donde el viento dibuja silencios y el cielo es testigo de misterios antiguos, un equipo de fútbol juvenil entrenaba al atardecer. No tenían uniformes, pero sí orgullo: sus camisetas estaban bordadas a mano por madres del pueblo, con diseños inspirados en los geoglifos. Esas prendas se vendían en una tienda digital llamada “Nasca <strong>Threads</strong>”, creada por uno de los jugadores para ayudar a su familia. De fondo, siempre sonaba rock nacional: desde Mar de Copas hasta bandas locales que cantaban sobre el desierto y la rebeldía.</p>
+      <p>Pero cuando una minera quiso usar parte del terreno para almacenamiento, el equipo supo que debía actuar. Organizaron un partido simbólico: “El Clásico de las Líneas”. Invitaron a periodistas, <strong>influencers</strong> y hasta a músicos de rock que tocaron en medio del campo. Las entradas eran donaciones para la tienda digital, y cada compra incluía un NFT del geoglifo del colibrí. El mundo miró, y el proyecto fue archivado.</p>
+      <p>Hoy, el equipo entrena en un campo protegido por ley cultural. Y cada vez que un jugador grita “¡gol!”, <strong>¡el desierto responde con el eco de once voces que defienden lo que es de todos!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 9 -->
+    <section class="story" id="historia-9">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>9. El saque que subió a la ciudadela</h2>
+      <p>En Aguas Calientes, donde cada mañana el tren trae sueños y turistas, entrenaba Lucero. Su pasión era el vóley, y su refugio, una pequeña cafetería llamada “Altitud 2430”, dedicada al café de Urubamba. Allí, entre tuestes y espumas, escuchaba huaynos que su abuela grababa en casetes: canciones de amor, de cosecha, de lucha. Lucero soñaba con llevar su equipo femenino a competir en Cusco, pero no tenían recursos ni transporte.</p>
+      <p>Entonces, tuvo una idea brillante: “¿Y si cada taza de café financiara un viaje?”. Creó el “Menú del Saque Perfecto”: por cada venta, un sol iba a un fondo colectivo. Además, los fines de semana organizaba “Huayno y Red”: después de servir café, la cafetería se convertía en cancha, y las clientas se animaban a jugar mientras sonaba un huayno nuevo: “Mi pelota vuela más alto que el Apu”. La iniciativa se volvió viral.</p>
+      <p>Hoy, su equipo ha ganado tres torneos regionales. Y cada vez que saltan para bloquear, <strong>¡parece que Machu Picchu las empuja desde las nubes para que nunca dejen de volar!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 10 -->
+    <section class="story" id="historia-10">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>10. La tabla que flotó en el lago sagrado</h2>
+      <p>En Puno, donde el lago Titicaca es espejo del cielo y hogar de los Uros, Mateo —sí, el mismo del atletismo, pero esta vez en otra historia— descubrió algo inusual: el surf no necesita océano. Inspirado por videos de “stand up paddle” en lagos europeos, construyó una tabla con totora y fibra de alpaca. Su tío tenía un <strong>food truck</strong> llamado “Titicaca <strong>Waves</strong>”, que servía trucha ahumada y quinua crocante. Los fines de semana, Mateo salía al lago, remando al ritmo de la cumbia amazónica que salía de una bocina solar.</p>
+      <p>Cuando los ancianos del lugar dijeron que era “falta de respeto” navegar así, Mateo no se ofendió. Al contrario: invitó a los sabios a subir a la tabla (con chalecos, claro), les preparó un menú especial en el <strong>food truck</strong> y les enseñó que el respeto también puede venir con innovación. Juntos crearon el “Festival del Agua”, donde se mezclan danzas uros, degustación de platos lacustres y exhibiciones de paddle con música de <strong>Juaneco</strong> y su Combo.</p>
+      <p>Ahora, turistas y locales aprenden a remar juntos. Y cada vez que la tabla corta el agua, <strong>¡el lago responde con olas que cantan: “El futuro también es tradición, si lo cuidamos con amor!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 11 -->
+    <section class="story" id="historia-11">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>11. La carrera de la fortaleza olvidada</h2>
+      <p>En la provincia de Luya, Amazonas, donde la niebla abraza las ruinas de <strong>Kuelap</strong> como un manto ancestral, corría Adrián. No tenía pista, pero sí senderos: subía y bajaba cerros con una mochila llena de libros y sueños. Su familia administraba una bodega tradicional que ahora ofrecía <strong>delivery</strong> con drones locales y aceptaba pagos con billetera digital. Cada tarde, al regresar de entrenar, escuchaba a su tío tocar el cajón en la puerta de la bodega —ritmos afroperuanos que hablaban de raíces, resistencia y esperanza.</p>
+      <p>Cuando el colegio canceló las olimpiadas escolares por “falta de interés”, Adrián decidió correr solo… pero no en silencio. Organizó la “Maratón de <strong>Kuelap</strong>”: una carrera simbólica desde la plaza hasta la fortaleza, con estaciones donde se contaban leyendas, se servía chicha de jora y sonaba música afroperuana en vivo. La bodega patrocinó hidratación con frutas nativas, y cada participante recibía una pulsera tejida por artesanas chachapoyas. La gente vino de Chachapoyas, de Bagua, incluso de Cajamarca.</p>
+      <p>Hoy, la carrera es oficial y cuenta con apoyo del Ministerio de Cultura. Y cada vez que Adrián cruza la meta, <strong>¡el eco de sus pasos resuena como el golpe del cajón en el corazón de una civilización que nunca dejó de correr!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 12 -->
+    <section class="story" id="historia-12">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>12. El rebote que desafió la nieve</h2>
+      <p>En Huaraz, bajo la sombra eterna del Huascarán, jugaba Renzo. Su cancha de frontón estaba entre dos bloques de viviendas, con paredes pintadas con murales de montañistas y glaciares. Su hermana manejaba una tienda digital llamada “Andes <strong>Craft</strong>”, donde vendía esculturas de piedra inspiradas en dioses andinos y brazaletes hechos con hilos de vicuña. Renzo no solo jugaba: componía letras de rock nacional en su cuaderno, canciones sobre pelotas perdidas, amistades rotas y segundas oportunidades.</p>
+      <p>Pero cuando una avalancha dañó parte del barrio y muchos se fueron, Renzo temió perder su cancha. Entonces lanzó “Frontón & Feedback”: un evento donde, después de jugar, bandas locales de rock tocaban en la calle, y cada entrada incluía una pieza de artesanía digitalizada con QR que contaba su historia. Grabaron un video titulado “Mi pared no se derrumba”, y se volvió tendencia nacional.</p>
+      <p>Ahora, la cancha tiene techo reforzado y luces solares. Y cada vez que la pelota rebota, <strong>¡suena como un acorde de guitarra eléctrica gritando: “Aquí seguimos, firmes como el nevado!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 13 -->
+    <section class="story" id="historia-13">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>13. El grito que despertó al adobe</h2>
+      <p>En Trujillo, donde el sol quema las ruinas de Chan <strong>Chan</strong> y el mar acaricia la costa, entrenaba Carla. Desde niña practicaba taekwondo en un gimnasio comunitario construido junto a un <strong>food truck</strong> familiar llamado “Chimú <strong>Kick</strong>”, famoso por sus empanadas de mariscos y sus batidos de lúcuma. Los fines de semana, su abuela cantaba huaynos en la plaza, y Carla ensayaba sus katas al ritmo de esas melodías antiguas, como si cada movimiento fuera una estrofa.</p>
+      <p>Cuando quisieron cerrar el gimnasio por “uso indebido de espacio público”, Carla no se doblegó. Convocó a todos: artesanos, chefs del <strong>food truck</strong>, músicos y vecinos. Hicieron una “Noche de Fuego Chimú”: exhibición de taekwondo bajo las estrellas, venta de platos típicos, y un huayno nuevo que decía: “Mi patada defiende lo que mis abuelos construyeron”. El alcalde asistió… y cambió de opinión.</p>
+      <p>Hoy, el gimnasio es un centro cultural reconocido. Y cada vez que Carla grita “¡kiai!”, <strong>¡el viento lleva su voz hasta las paredes de Chan Chan, como si el desierto respondiera: “Sigue luchando, niña de barro y fuego!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 14 -->
+    <section class="story" id="historia-14">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>14. El triple que cruzó el cañón</h2>
+      <p>En Yanque, donde el cóndor ronda el cielo y el río Colca serpentea como un hilo de vida, jugaba Iván. Su cancha de básquet estaba en la azotea de una cafetería llamada “Cóndor <strong>Brew</strong>”, fundada por su madre con granos de Chivay y técnicas de tueste sostenible. Allí, entre aromas a café y risas, Iván practicaba triples mientras sonaba la cumbia amazónica de Los <strong>Shapis</strong> —una mezcla extraña, pero que le daba ritmo y alegría.</p>
+      <p>Pero cuando una sequía afectó a la comunidad y muchos jóvenes se fueron, Iván tuvo una idea: “¿Y si usamos el básquet para traerlos de vuelta?”. Creó el “Torneo del Cóndor”: equipos de distintos pueblos competían, y la cafetería donaba una planta de café por cada punto anotado. Al final, concierto de cumbia en vivo y siembra colectiva en las laderas. Las redes sociales hicieron el resto.</p>
+      <p>Hoy, el torneo es anual y atrae turistas y deportistas. Y cada vez que Iván encesta desde la línea de tres puntos, <strong>¡el cañón entero vibra como si el cóndor aplaudiera desde las alturas!</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 15 -->
+    <section class="story" id="historia-15">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>15. El penal en el ombligo del mundo</h2>
+      <p>En Juliaca, donde el frío cala los huesos pero no el alma, jugaba Diego —sí, hay varios Diegos, ¡porque el Perú los cría valientes! Su equipo local entrenaba en una cancha de tierra cerca del Lago Titicaca, con arcos torcidos y camisetas desteñidas. Su padre tenía una bodega que ahora ofrecía <strong>delivery</strong> con motos eléctricas y tenía un código QR para ver recetas de la abuela. Cada noche, antes de dormir, Diego escuchaba música afroperuana: el cajón, el zapateo, la voz que nace del dolor y la alegría.</p>
+      <p>Cuando les negaron el permiso para jugar un torneo regional por “no tener uniformes oficiales”, Diego no se rindió. Reunió a las madres del barrio, quienes cosieron camisetas con telas de mantas uros, y organizaron una “Fiesta del Balón Negro”: venta de productos en la bodega, concierto afroperuano en la orilla del lago, y un partido simbólico al atardecer. Grabaron un video que decía: “Nuestro uniforme es nuestra historia”.</p>
+      <p>Hoy, el equipo juega con orgullo en ligas departamentales. Y cada vez que Diego patea un penal, <strong>¡el lago refleja su figura como si el ombligo del mundo le dijera: “Hazlo por todos los que creyeron en ti!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 16 -->
+    <section class="story" id="historia-16">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>16. La red que unió selva y piedra</h2>
+      <p>En la provincia de <strong>Bongará</strong>, Amazonas, donde la niebla envuelve <strong>Kuelap</strong> como un secreto milenario, entrenaba un equipo femenino de vóley. No tenían red reglamentaria, pero sí determinación: usaban sogas de cáñamo y postes de eucalipto. Su capitana, Maribel, ayudaba a su tía a gestionar una tienda digital llamada “Raíces de Piedra”, donde vendían réplicas miniatura de <strong>Kuelap</strong> talladas en madera de aliso y collares con semillas amazónicas. De fondo, siempre sonaba rock nacional: desde Arena Hash hasta bandas locales que cantaban sobre identidad y rebeldía.</p>
+      <p>Cuando les dijeron que “el vóley no era para chicas del campo”, Maribel organizó el “Festival Selva & Red”: una jornada donde se mezclaba exhibición deportiva, venta virtual de artesanía en vivo por Instagram, y un concierto de rock en las afueras de <strong>Kuelap</strong>, con batería hecha de tambores ancestrales. Grabaron un video titulado “Nosotras saltamos más alto que el olvido”, y fue visto por miles.</p>
+      <p>Hoy, su equipo entrena en una cancha techada donada por una fundación cultural. Y cada vez que bloquean un remate, <strong>¡el eco resuena como un riff de guitarra que grita: “Aquí las mujeres no solo tejemos redes… ¡las rompemos!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 17 -->
+    <section class="story" id="historia-17">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>17. La ola que subió a la montaña</h2>
+      <p>En Cusco, lejos del mar pero cerca del corazón del mundo, vivía Alonso. Aunque nació en los Andes, descubrió el surf en un viaje escolar a Máncora. Quedó fascinado: no por el agua, sino por la libertad. De vuelta en Cusco, construyó una tabla de equilibrio con madera de aliso y la usaba en los senderos inclinados cerca de Machu Picchu, imaginando que cada curva era una ola. Su hermana manejaba un <strong>food truck</strong> llamado “Pachamama Surf”, que servía ceviche de trucha y quinoa bowls con vista al Sacsayhuamán. Por las noches, escuchaban huaynos que hablaban de caminos, despedidas y regresos.</p>
+      <p>Cuando un grupo de turistas se burló diciendo “¿surf en la sierra? ¡eso no existe!”, Alonso no se ofendió. Al contrario: creó el “Día del <strong>Surfero</strong> Andino”. Invitó a niños de comunidades rurales, les enseñó equilibrio y resiliencia, sirvió comida desde el <strong>food truck</strong>, y cerró con un huayno compuesto por él: “Mi tabla no busca el mar, busca el alma”. El video se volvió viral en TikTok.</p>
+      <p>Hoy, su iniciativa es parte de un programa de educación emocional en colegios cusqueños. Y cada vez que Alonso se para en su tabla, <strong>¡el viento andino canta: “No necesitas océano para ser ola… basta con tener sueños que no se doblan!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 18 -->
+    <section class="story" id="historia-18">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>18. El sprint entre cóndores</h2>
+      <p>En Chivay, donde el cañón se abre como un abismo sagrado y el cóndor reina en silencio, corría Lucía. Desde los ocho años, entrenaba en los senderos que bajan al río Colca, con zapatillas rotas y una botella de agua de su madre, dueña de la cafetería “Café del Abismo”, que servía granos cultivados en terrazas ancestrales. Lucía no corría para ganar medallas, sino para sentirse viva. Y lo hacía al ritmo de la cumbia amazónica que su hermano ponía en un parlante solar: “Sonido Selva” era su banda sonora.</p>
+      <p>Pero cuando cancelaron el campeonato departamental por falta de fondos, Lucía decidió correr igual. Organizó el “Sprint del Cóndor”: una carrera simbólica de 100 metros en la plaza principal, con premios en café de especialidad y música en vivo. Cada participante recibía una semilla de café para plantar. La gente vino de Arequipa, de Caylloma, incluso de Puno. Los medios llamaron a Lucía “la chispa del sur”.</p>
+      <p>Ahora, su cafetería financia becas para atletas rurales. Y cada vez que Lucía cruza una meta, <strong>¡el cañón responde con un silencio que grita más fuerte que cualquier estadio: “Corre, hija de la tierra, que el viento te empuja!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 19 -->
+    <section class="story" id="historia-19">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>19. La pelota que dibujó su propio geoglifo</h2>
+      <p>En Nasca, donde el desierto guarda secretos en líneas invisibles, jugaba Raúl. Su cancha de frontón estaba junto a una bodega familiar que ahora tenía código QR, <strong>delivery</strong> con motos eléctricas y hasta un sistema de puntos por reciclaje. Raúl no solo golpeaba la pelota: la hacía bailar. Cada movimiento lo practicaba al ritmo del cajón, gracias a su abuelo, músico afroperuano que decía: “El frontón es danza con pared”.</p>
+      <p>Cuando quisieron usar el terreno para un depósito de materiales, Raúl no se calló. Reunió a jóvenes, artistas y músicos. Hicieron una “Noche de Pelota y Cajón”: proyectaron luces sobre el desierto formando un geoglifo temporal de una pelota en movimiento, sirvieron snacks desde la bodega, y sonó un festejo afroperuano que duró hasta el amanecer. El video con drones se volvió símbolo de resistencia cultural.</p>
+      <p>Hoy, la cancha es un espacio protegido por la municipalidad. Y cada vez que Raúl lanza la pelota, <strong>¡el desierto responde con un eco que dice: “Aquí no se borran líneas… ¡se crean nuevas!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 20 -->
+    <section class="story" id="historia-20">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>20. El grito que flotó sobre el lago</h2>
+      <p>En Puno, donde el lago Titicaca es espejo del cielo y refugio de islas flotantes, entrenaba Sofía. Practicaba taekwondo en una plataforma de totora, diseñada por su abuelo, para “sentir el equilibrio del agua”. Su madre vendía tejidos en una tienda digital llamada “Runa <strong>Soul</strong>”, donde cada chullo venía con un código que reproducía una canción de rock nacional peruano. Sofía ensayaba sus katas al atardecer, mientras sonaba Libido o Mar de Copas desde un altavoz solar.</p>
+      <p>Pero cuando una empresa extranjera intentó patentar los diseños tradicionales de los Uros, Sofía supo que debía actuar. Organizó “Arte & Defensa”: un evento en la Isla de los Uros donde se enseñaba taekwondo a niñas, se vendía artesanía auténtica y se tocaba rock en vivo con instrumentos hechos de totora. La campaña #MiDiseñoEsMiVoz se volvió tendencia.</p>
+      <p>Hoy, su tienda digital colabora con comunidades lacustres. Y cada vez que Sofía grita “¡kiai!” sobre el lago, <strong>¡el agua vibra como una guitarra eléctrica que dice: “Nadie apaga la voz de quienes defienden su identidad!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 21 -->
+    <section class="story" id="historia-21">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>21. El mate que subió al nevado</h2>
+      <p>En Caraz, donde el Huascarán vigila como un dios de hielo y roca, jugaba Mateo —sí, otro Mateo, porque el Perú siembra nombres con propósito. Su cancha de básquet estaba en la plaza principal, con aros torcidos pero corazones rectos. Su tía tenía un <strong>food truck</strong> llamado “Nevado Burger”, que servía hamburguesas de alpaca y batidos de maca. Los domingos, después del partido, todos se reunían a escuchar huaynos que cantaban los ancianos del barrio: canciones de cosecha, de despedida, de esperanza.</p>
+      <p>Cuando una avalancha aisló a varias comunidades y el colegio suspendió actividades, Mateo no se quedó quieto. Organizó “Canastas Solidarias”: cada triple anotado en la plaza significaba una ración de comida entregada por el <strong>food truck</strong> en zonas afectadas. Al final del día, un círculo de huayno unía a todos, incluso a los rescatistas. La gente grabó videos, y pronto llegaron donaciones de todo el país.</p>
+      <p>Hoy, el <strong>food truck</strong> tiene un menú llamado “El Triple del Nevado”. Y cada vez que Mateo encesta, <strong>¡el eco sube hasta la cima del Huascarán y vuelve como un mensaje: “Aquí, el deporte no solo juega… ¡alimenta el alma!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 22 -->
+    <section class="story" id="historia-22">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>22. El gol que despertó al rey chimú</h2>
+      <p>En Trujillo, donde el sol dora las murallas de Chan <strong>Chan</strong> y el mar susurra secretos antiguos, entrenaba un equipo juvenil llamado “Los Hijos del Sol”. No tenían botines, pero sí garra. Su entrenador, hijo de caficultores de San Martín, abrió una cafetería llamada “Café Chimú”, donde cada taza venía con una historia sobre los reyes de barro. Los fines de semana, mientras preparaban <strong>cold brew</strong>, sonaba la cumbia amazónica de <strong>Juaneco</strong> y su Combo —una mezcla extraña, pero que les daba ritmo y alegría.</p>
+      <p>Pero cuando quisieron construir un centro comercial sobre parte del sitio arqueológico, el equipo decidió actuar. Organizaron un “Partido por Chan <strong>Chan</strong>”: jugaron en la periferia del complejo, con camisetas estampadas con diseños chimú, y al final, un concierto de cumbia con instrumentos hechos de cerámica reciclada. La campaña #GolParaLaHistoria se volvió viral.</p>
+      <p>Hoy, la cafetería financia talleres de arqueología para niños. Y cada vez que el balón entra al arco, <strong>¡el desierto responde con un eco que dice: “El fútbol también puede ser memoria… y resistencia!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 23 -->
+    <section class="story" id="historia-23">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>23. La red que atrapó el viento andino</h2>
+      <p>En Huaraz, donde el aire es frío pero los corazones arden, entrenaba un equipo femenino de vóley en una cancha de tierra junto al río Santa. Su capitana, Lucía, ayudaba a su padre en una bodega que ahora ofrecía <strong>delivery</strong> con motos eléctricas y tenía un sistema de puntos por reciclar envases. Cada tarde, después del entrenamiento, su abuelo tocaba el cajón en la puerta, y ellas practicaban bloqueos al ritmo de la música afroperuana —como si cada salto fuera un verso.</p>
+      <p>Cuando una empresa quiso privatizar el acceso al río para un proyecto turístico, Lucía no se calló. Convocó a todas las jugadoras, a músicos, a vecinos. Hicieron “Vóley & Cajón bajo el Nevado”: una jornada de juego, música y conciencia ambiental. Las entradas eran donaciones para proteger el río, y cada participante recibía una semilla nativa. El video con drones mostrando la red iluminada al atardecer conmovió al país.</p>
+      <p>Hoy, el río es zona protegida comunitaria. Y cada vez que Lucía salta para bloquear, <strong>¡el viento andino canta: “Esta red no atrapa pelotas… ¡defiende la vida!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 24 -->
+    <section class="story" id="historia-24">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>24. La tabla que surcó el desierto</h2>
+      <p>En Trujillo, lejos del mar pero cerca del alma del norte, vivía Diego —otro Diego, sí, porque el Perú los multiplica cuando hay lucha. Aunque nunca había visto el océano de niño, soñaba con surfear. A los 12 años, en un viaje escolar a Huanchaco, vio las caballitos de totora y supo: “Esa es mi ola”. De vuelta en casa, construyó una tabla de equilibrio inspirada en los caballitos y la usaba en las dunas cercanas a Chan <strong>Chan</strong>. Su hermana vendía réplicas de cerámica chimú en una tienda digital llamada “Barro & Rock”.</p>
+      <p>Cuando le dijeron que “el surf no pertenece al desierto”, Diego respondió con acción. Creó “Desierto Surf <strong>Fest</strong>”: una exhibición de equilibrio en las dunas, venta virtual de artesanía en vivo, y un concierto de rock nacional con letras sobre identidad costera. Grabaron un video titulado “Mi ola es de viento”, y fue trending en redes.</p>
+      <p>Hoy, su iniciativa es parte de un programa de turismo cultural sostenible. Y cada vez que Diego se para en su tabla, <strong>¡el desierto responde con un silencio que grita: “No necesitas agua para ser ola… ¡basta con tener raíces y coraje!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+    <!-- Historia 25 -->
+    <section class="story" id="historia-25">
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+      <h2>25. La última vuelta al corazón del mundo</h2>
+      <p>En Aguas Calientes, donde cada mañana el tren trae sueños y el río Urubamba canta historias, corría Isabel. Desde niña, entrenaba en los senderos que suben a Machu Picchu, con zapatillas rotas y una mochila llena de panes que su madre vendía en su bodega modernizada —con QR, <strong>delivery</strong> y hasta un sistema de fidelización con sellos digitales. Isabel no corría para ganar, sino para honrar: cada paso era una oración a los <strong>Apus</strong>. Por las noches, escuchaba huaynos que su abuela grababa en su celular: “Corre, hija, que la tierra te empuja”.</p>
+      <p>Cuando cancelaron el campeonato nacional por recortes, Isabel no se detuvo. Organizó la “Carrera del Corazón Inca”: una vuelta simbólica alrededor de la montaña, con estaciones donde se compartía pan de la bodega, se contaban leyendas y se cantaba un huayno colectivo compuesto por los niños del pueblo. Grabaron un video con drones que mostraba a corredores formando un cóndor en movimiento. El mundo lo vio.</p>
+      <p>Hoy, su bodega tiene un rincón llamado “El Kilómetro Sagrado”. Y cada vez que Isabel cruza una meta, <strong>¡el viento entre las piedras de Machu Picchu susurra: “Corre, niña, que tu sudor riega la memoria de quienes vinieron antes!”</strong></p>
+      <a href="#top" class="top-link">↑ Volver al inicio</a>
+    </section>
+
+  </main>
+</body>
+</html>
